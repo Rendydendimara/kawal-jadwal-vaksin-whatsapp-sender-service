@@ -11,7 +11,14 @@ import qrcode from 'qrcode-terminal'
 import { IJadwalVaksin } from './interface/IIJadwalVaksin'
 
 
-const client = new Client({});
+const client = new Client({
+  puppeteer: {
+    ignoreDefaultArgs : [
+    '--no-sandbox',
+    '--disable-setuid-sandbox'
+  ]
+  }
+});
 
 const DUMMY_PHONE_NUMBER:string[] = [
   '6282144092221',

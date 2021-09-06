@@ -21,7 +21,14 @@ const expressLimmiter_1 = __importDefault(require("./middleware/expressLimmiter"
 const http_1 = __importDefault(require("http"));
 const whatsapp_web_js_1 = require("whatsapp-web.js");
 const qrcode_terminal_1 = __importDefault(require("qrcode-terminal"));
-const client = new whatsapp_web_js_1.Client({});
+const client = new whatsapp_web_js_1.Client({
+    puppeteer: {
+        ignoreDefaultArgs: [
+            '--no-sandbox',
+            '--disable-setuid-sandbox'
+        ]
+    }
+});
 const DUMMY_PHONE_NUMBER = [
     '6282144092221',
     '6282144092221',
