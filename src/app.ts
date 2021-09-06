@@ -135,11 +135,13 @@ app.use((err:Error, req:Request, res:Response, next:NextFunction) => {
 });
 
 // Listen
-if(process.env.NODE_ENV === 'development') {
-  app.listen(PORT,() => console.log(`server running on port ${PORT}`));
-} else {
-  const server = http.createServer(app);
-  server.listen();
-  console.log('Running on', server.address())  
-}
+app.listen(PORT,() => console.log(`server running on port ${PORT}`));
+
+// if(process.env.NODE_ENV === 'development') {
+//   app.listen(PORT,() => console.log(`server running on port ${PORT}`));
+// } else {
+//   const server = http.createServer(app);
+//   server.listen();
+//   console.log('Running on', server.address())  
+// }
  

@@ -18,7 +18,6 @@ const body_parser_1 = __importDefault(require("body-parser"));
 const helmet_1 = __importDefault(require("helmet"));
 const cors_1 = __importDefault(require("cors"));
 const expressLimmiter_1 = __importDefault(require("./middleware/expressLimmiter"));
-const http_1 = __importDefault(require("http"));
 const whatsapp_web_js_1 = require("whatsapp-web.js");
 const qrcode_terminal_1 = __importDefault(require("qrcode-terminal"));
 const client = new whatsapp_web_js_1.Client({
@@ -123,12 +122,12 @@ app.use((err, req, res, next) => {
     });
 });
 // Listen
-if (process.env.NODE_ENV === 'development') {
-    app.listen(PORT, () => console.log(`server running on port ${PORT}`));
-}
-else {
-    const server = http_1.default.createServer(app);
-    server.listen();
-    console.log('Running on', server.address());
-}
+app.listen(PORT, () => console.log(`server running on port ${PORT}`));
+// if(process.env.NODE_ENV === 'development') {
+//   app.listen(PORT,() => console.log(`server running on port ${PORT}`));
+// } else {
+//   const server = http.createServer(app);
+//   server.listen();
+//   console.log('Running on', server.address())  
+// }
 //# sourceMappingURL=app.js.map

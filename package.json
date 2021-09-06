@@ -5,7 +5,10 @@
   "main": "app.ts",
   "scripts": {
     "start": "npm run serve",
-    "serve": "node dist/app.js"
+    "dev": "NODE_ENV=development nodemon src/app.ts",
+    "serve": "node dist/app.js",
+    "build-ts": "tsc",
+    "build": "npm run build-ts"
   },
   "repository": {
     "type": "git",
