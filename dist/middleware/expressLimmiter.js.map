@@ -1,0 +1,1 @@
+{"version":3,"file":"expressLimmiter.js","sourceRoot":"","sources":["../../src/middleware/expressLimmiter.ts"],"names":[],"mappings":";;;;;AAAA,4EAA0C;AAE1C,MAAM,eAAe,GAAG,IAAA,4BAAS,EAAC;IACjC,wBAAwB;IACxB,QAAQ,EAAE,EAAE,GAAC,EAAE,GAAC,IAAI;IACpB,GAAG,EAAE,GAAG;IACR,OAAO,EAAE,oEAAoE;CAC7E,CAAC,CAAC;AAEH,kBAAe,eAAe,CAAA"}
